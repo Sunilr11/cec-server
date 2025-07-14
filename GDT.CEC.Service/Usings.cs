@@ -1,0 +1,9 @@
+﻿global using System.Text;
+global using System.Net;
+global using Microsoft.Extensions.Caching.Distributed;
+global using Microsoft.Extensions.Options;
+global using GDT.CEC.Repository.Interface;
+global using GDT.CEC.Repository.Models.Configurations;
+global using GDT.CEC.Repository.Models.Users;
+global using GDT.CEC.Service.Interfaces;
+global using GDT.CEC.Repository.Constants;

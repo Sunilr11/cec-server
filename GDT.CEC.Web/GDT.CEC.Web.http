@@ -1,0 +1,6 @@
+@GDT.CEC.Web_HostAddress = http://localhost:5115
+
+GET {{GDT.CEC.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

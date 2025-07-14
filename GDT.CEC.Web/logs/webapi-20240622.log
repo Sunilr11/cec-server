@@ -1,0 +1,4 @@
+2024-06-22 01:43:05.378 +05:30  ERR  An error occurred while serializing the ID property of class GDT.CEC.Repository.Models.Users.User: 'string' is not a valid 24 digit hex string.
+2024-06-22 01:52:15.622 +05:30  ERR  An error occurred while serializing the ID property of class GDT.CEC.Repository.Models.Users.User: 'string' is not a valid 24 digit hex string.
+2024-06-22 02:08:54.444 +05:30  ERR  An error occurred while serializing the ID property of class GDT.CEC.Repository.Models.Users.User: 'string' is not a valid 24 digit hex string.
+2024-06-22 02:10:45.030 +05:30  ERR  An error occurred while serializing the AreaOfInt property of class GDT.CEC.Repository.Models.Users.User: An error occurred while serializing the ID property of class GDT.CEC.Repository.Models.Users.AreaOfInterest: 'string' is not a valid 24 digit hex string.

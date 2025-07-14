@@ -1,0 +1,26 @@
+2024-06-26 10:38:48.329 +05:30  ERR  Connection id "0HN4LJO7H82C1", Request id "0HN4LJO7H82C1:00000007": An unhandled exception was thrown by the application.Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Template" for actions - GDT.CEC.Web.Controllers.TemplateController.GetMenus (GDT.CEC.Web),GDT.CEC.Web.Controllers.TemplateController.GetHomeTemplate (GDT.CEC.Web). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+
+2024-06-26 10:39:15.620 +05:30  ERR  Connection id "0HN4LJOFMSEQ5", Request id "0HN4LJOFMSEQ5:00000007": An unhandled exception was thrown by the application.Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Template" for actions - GDT.CEC.Web.Controllers.TemplateController.GetMenus (GDT.CEC.Web),GDT.CEC.Web.Controllers.TemplateController.GetHomeTemplate (GDT.CEC.Web). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+
+2024-06-26 10:41:16.215 +05:30  ERR  Element 'IntroCard' does not match any field or property of class GDT.CEC.Repository.Models.PageTemplate.HomeTemplate.
+2024-06-26 10:41:47.275 +05:30  ERR  Element 'IntroCard' does not match any field or property of class GDT.CEC.Repository.Models.PageTemplate.HomeTemplate.
+2024-06-26 10:45:38.061 +05:30  ERR  Element 'IntroCard' does not match any field or property of class GDT.CEC.Repository.Models.PageTemplate.HomeTemplate.
+2024-06-26 10:50:00.092 +05:30  ERR  An error occurred while deserializing the Labs property of class GDT.CEC.Repository.Models.PageTemplate.HomeTemplate: Element 'subTitle' does not match any field or property of class GDT.CEC.Repository.Models.PageTemplate.Labs.
