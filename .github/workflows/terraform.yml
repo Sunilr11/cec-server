@@ -1,4 +1,4 @@
-name: Build and Push Docker Image to Azure Container Registry
+name: Build and Push Docker Image to ACR
 
 on:
   workflow_dispatch:
@@ -9,11 +9,10 @@ on:
 
 env:
   IMAGE_REPOSITORY: gdtcecbackend
-  CONTAINER_REGISTRY: cecacrapptest01.azurecr.io
   DOCKERFILE_PATH: ./Dockerfile
 
 jobs:
-  build-and-push:
+  Build-Image:
     runs-on: ubuntu-22.04
 
     steps:
@@ -23,6 +22,15 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
+    - name: Set container registry based on branch
+      id: registry
+      run: |
+        if [ "${GITHUB_REF##*/}" = "main" ]; then
+          echo "CONTAINER_REGISTRY=cecacrappprod01.azurecr.io" >> $GITHUB_ENV
+        else
+          echo "CONTAINER_REGISTRY=cecacrapptest01.azurecr.io" >> $GITHUB_ENV
+        fi
+
     - name: Log in to Azure Container Registry
       uses: azure/docker-login@v2
       with:
@@ -31,7 +39,6 @@ jobs:
         password: ${{ secrets.ACR_PASSWORD }}
 
     - name: Get short SHA
-      id: vars
       run: echo "SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-4)" >> $GITHUB_ENV
 
     - name: Build and push Docker image
