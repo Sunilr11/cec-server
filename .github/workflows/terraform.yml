@@ -27,8 +27,8 @@ jobs:
       uses: azure/docker-login@v2
       with:
         login-server: ${{ env.CONTAINER_REGISTRY }}
-        username: ${{ secrets.ACR_USERNAME }}
-        password: ${{ secrets.ACR_PASSWORD }}
+        username: ${{ secrets.ACR_USERNAME }}   # Service principal client ID
+        password: ${{ secrets.ACR_PASSWORD }}   # Service principal client secret
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
@@ -36,4 +36,5 @@ jobs:
         context: .
         file: ${{ env.DOCKERFILE_PATH }}
         push: true
-        tags: ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_REPOSITORY }}:${{ github.run_id }}
+        # Short tag using GitHub SHA
+        tags: ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_REPOSITORY }}:${{ github.sha }}
