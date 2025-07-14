@@ -30,11 +30,14 @@ jobs:
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
 
+    - name: Get short SHA
+      id: vars
+      run: echo "SHORT_SHA=$(echo $GITHUB_SHA | cut -c1-4)" >> $GITHUB_ENV
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
         context: .
         file: ${{ env.DOCKERFILE_PATH }}
         push: true
-        # Short and unique tag: first 4 characters of the commit SHA
-        tags: ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_REPOSITORY }}:${{ github.sha::4 }}
+        tags: ${{ env.CONTAINER_REGISTRY }}/${{ env.IMAGE_REPOSITORY }}:${{ env.SHORT_SHA }}
